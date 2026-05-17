@@ -1,0 +1,97 @@
+﻿def rectangle():
+    l = float(input("Length: "))
+    w = float(input("Width: "))
+    print("Area:", l * w)
+
+def average():
+    a = float(input("A: "))
+    b = float(input("B: "))
+    c = float(input("C: "))
+    print("Average:", (a+b+c)/3)
+
+def square():
+    s = float(input("Side: "))
+    print("Area:", s*s)
+
+def largest():
+    a, b, c = map(int, input("Enter 3 numbers: ").split())
+    print("Largest:", max(a, b, c))
+
+def smallest():
+    a, b, c = map(int, input("Enter 3 numbers: ").split())
+    print("Smallest:", min(a, b, c))
+
+def even_odd():
+    n = int(input("Enter number: "))
+    print("Even" if n % 2 == 0 else "Odd")
+
+def calculator():
+    a = float(input("A: "))
+    b = float(input("B: "))
+    op = input("Operator (+ - * /): ")
+    if op == '+': print(a+b)
+    elif op == '-': print(a-b)
+    elif op == '*': print(a*b)
+    elif op == '/': print(a/b)
+    else: print("Invalid")
+
+def celsius_to_f():
+    c = float(input("Celsius: "))
+    print("Fahrenheit:", (c*9/5)+32)
+
+def grade():
+    m = float(input("Marks: "))
+    if m >= 90: print("A")
+    elif m >= 75: print("B")
+    elif m >= 50: print("C")
+    else: print("Fail")
+
+def sum_100():
+    print("Sum:", sum(range(1,101)))
+
+def factorial():
+    n = int(input("Number: "))
+    f = 1
+    for i in range(1, n+1):
+        f *= i
+    print("Factorial:", f)
+
+def bill():
+    u = int(input("Units: "))
+    if u <= 100: cost = u*5
+    elif u <= 200: cost = u*7
+    else: cost = u*10
+    print("Bill:", cost)
+
+while True:
+    print("\n--- MENU ---")
+    print("1 Rectangle")
+    print("2 Average")
+    print("3 Square")
+    print("4 Largest")
+    print("5 Smallest")
+    print("6 Even/Odd")
+    print("7 Calculator")
+    print("8 Celsius to Fahrenheit")
+    print("9 Grade")
+    print("10 Sum 1-100")
+    print("11 Factorial")
+    print("12 Electricity Bill")
+    print("0 Exit")
+
+    choice = input("Choose: ")
+
+    if choice == "1": rectangle()
+    elif choice == "2": average()
+    elif choice == "3": square()
+    elif choice == "4": largest()
+    elif choice == "5": smallest()
+    elif choice == "6": even_odd()
+    elif choice == "7": calculator()
+    elif choice == "8": celsius_to_f()
+    elif choice == "9": grade()
+    elif choice == "10": sum_100()
+    elif choice == "11": factorial()
+    elif choice == "12": bill()
+    elif choice == "0": break
+    else: print("Invalid choice")
